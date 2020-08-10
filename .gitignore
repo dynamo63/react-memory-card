@@ -1,0 +1,8 @@
+node_modules
+
+# public folder
+dist
+
+# Yarn Files
+.cache
+yarn-error.log

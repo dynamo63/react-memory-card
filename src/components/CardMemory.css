@@ -1,0 +1,46 @@
+.card-memory{
+    height: 20vh;
+    cursor: pointer;
+}
+
+.container{
+    width: 70%;
+}
+
+.card-back,.card-front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform .2s linear;
+}
+
+.card-back > img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-back{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card-front{
+    background-color: #E1C21E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 8em;
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card-memory.card-reveal > .card-back{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card-memory.card-reveal > .card-front{
+    transform: perspective(600px) rotateY(180deg);
+}
